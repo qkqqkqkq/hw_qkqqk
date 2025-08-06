@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 프로필 관리 페이지</title>
+</head>
+<body>
+    <header>
+        <h1>메뉴</h1>
+        <nav>
+            <ul>
+                <li><a href="#membership" class="scroll-link">회원가입</a></li>
+                <li><a href="#profile-info" class="scroll-link">프로필 정보</a></li>
+                <li><a href="#contact" class="scroll-link">문의하기</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main id="membership">
+        <section>
+            <h2>회원가입</h2>
+            <form id="profileForm">
+                <label for="name"> 이름:</label>
+                <input type="text" id="username" name="username" placeholder="이름!!" required><br>
+                <br>
+        
+                <label for="email">이메일:</label>
+                <input type="email" name="email" id="email" placeholder="example@example.com" required><br>
+                <br>
+
+                <label for="password">비밀번호:</label>
+                <input type="password" name="password" id="password" placeholder="비밀번호를 입력해주세요.!" required><br>
+                <br>
+
+                <label for="age">나이:</label>
+                <input type="number" name="age" id="age" min = "1" max = "150" placeholder="나이를 입력해주세용~~" required><br>
+                <br>
+
+                <label>성별:</label>
+                <input type="radio" name="gender" id="male" value="남성" required> 
+                <label for="male">남성</label>
+                <input type="radio" name="gender" id="female" value="여성" >
+                <label for="female">여성</label><br>
+
+                <label for="self">자기소개:</label>
+                <textarea name="self" id="self" rows="4" cols="50" placeholder="자기소개를 입력하세요!!!!!!"></textarea><br>
+                <br>
+
+                <label for="hobbies">좋아하는 취미:</label>
+                <select name="hobbies" id="hobbies">
+                    <optgroup label="스포츠">
+                        <option value="축구">축구</option>
+                        <option value="야구">야구</option>
+                        <option value="농구">농구</option>
+                    </optgroup>
+                    <optgroup label="예술">
+                        <option value="음악">음악</option>
+                        <option value="미술">미술</option>
+                        <option value="사진">사진</option>
+                    </optgroup>
+                    <optgroup label="기타">
+                        <option value="독서">독서</option>
+                        <option value="여행">여행</option>
+                        <option value="요리">요리</option>
+                    </optgroup>
+                </select>
+                <br><br>
+                <label for="profilePic">프로필 사진 업로드:</label>
+                <input type="file" name="profilePic" id="profilePic" accept="image/*"><br>
+                <br>
+
+                <button type="button">회원가입</button>
+                <button type="reset">초기화</button>
+
+                <label for="progress">업데이트 진행 상황:</label>
+                <progress id="progress" value="0" max="100"></progress>
+
+            </form>
+
+        </section>
+    <hr>
+    <section id="profile-info">
+        <h2>프로필 정보</h2>
+        <table>
+            <caption>프로필 정보 요약</caption>
+            <colgroup>
+                <col style="width: 20%;">
+                <col style="width: 80%;">
+            </colgroup>
+            <thead>
+                <th>항목</th>
+                <th>내용</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>프로필</th>
+                </tr>
+                <tr>
+                    <th>이름</th>
+                    <td id="displayName"></td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td id="displayEmail"></td>
+                </tr>
+                <tr>
+                    <th>나이</th>
+                    <td id="displayAge"></td>
+                </tr>
+                <tr>
+                    <th>성별</th>
+                    <td id="displayGender"></td>
+                </tr>
+                <tr>
+                    <th>자기소개</th>
+                    <td id="displaySelf"></td>
+                </tr>
+                <tr>
+                    <th>취미</th>
+                    <td id="displayHobbies"></td>
+                </tr>
+                    
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">프로필 정보가 성공적으로 업데이트가 되어부렀당께요~~</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+        
+    </section>
+    </main>
+    <hr>
+    <footer id="contact">
+        <h2>문의하기</h2>
+        <address>
+            <p>문의: <a href="mailto:example@example.com">example@example.com</a></p>
+            <p>전화: 010-1234-5678</p>
+            <p>주소: 서울특별시 중구 예제로 123</p>
+        </address>
+        <h3>오시는 길</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.8691979343985!2d126.74040631744387!3d37.6757812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c857e92746bc9%3A0xee19ea9fd93ccb02!2z6rOg7JaR7KKF7ZWp7Jq064-Z7J6l!5e0!3m2!1sko!2skr!4v1754377140136!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p><strong>Copyright &copy; 2024</strong> 프로필 관리 페이지</p>
+    </footer>
+    
+
+    
+</body>
+</html>
