@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#main-header{
+    background-image:url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA1MTZfMTUy%2FMDAxNzE1Nzg3NDY4Mzk2.N1E8RlhMCZuU3VDKPfDrIhbw5bBDwa8baJDtD2wRnJYg.D3ulpKULk1S2ykmzTky9Qvk9mTjDvW8MGcqzckBKbN8g.PNG%2F25.png&type=sc960_832');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    height: 200px;
+}
