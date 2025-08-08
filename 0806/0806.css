@@ -1,14 +1,88 @@
+/* 초기화 */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* 상단바 */
 #main-header{
     background-image:url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA1MTZfMTUy%2FMDAxNzE1Nzg3NDY4Mzk2.N1E8RlhMCZuU3VDKPfDrIhbw5bBDwa8baJDtD2wRnJYg.D3ulpKULk1S2ykmzTky9Qvk9mTjDvW8MGcqzckBKbN8g.PNG%2F25.png&type=sc960_832');
     background-size: cover;
     color: white;
     text-align: center;
+    font-size: 13px;
     padding: 20px 0;
-    height: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center; 
+    /* main axis을 따라 아이템을 어떻게 정렬할지 정해주는 속성 */
+}
+
+.maincontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.sidebar{
+    margin-right: auto;
+}
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li a {
+    display: block; 
+    width: 170px; 
+    height: 40px; 
+    line-height: 40px; 
+    margin-top: 16px;
+    background-color: #28a745; 
+    color: white;
+    text-decoration: none;
+    text-align:left; 
+    padding-left: 8px;
+    font-size: 13px; 
+    margin-left: 20px;
+    
+}
+
+.sidebar ul li a:hover {
+    background-color: #218838;
+}
+
+.sidebar ul li a:hover {
+    background-color: #218838; 
+}
+
+form{
+    position: absolute;
+    font-size: 13px;
+    margin-top: 10%;
+    background-color: #f0f0f0;
+    padding: 2%;
+    max-width: 25%;
+    margin-bottom: 20%;
+    
+}
+
+form label,
+form input,
+form .gender,
+form .agree,
+form button {
+    display: block;
+    width: 100%;
+    
+}
+
+footer{
+    color: white;
+    text-align: center;
+    background-color: black;
+    padding: 3px;
+    bottom: 0;
+    position: fixed;
+    width:100%;
 }
