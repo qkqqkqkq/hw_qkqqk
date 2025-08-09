@@ -14,7 +14,7 @@
             <h1>회원가입</h1>
         </div>
     </header>
-
+<!--사이드바, 로그인 창 포함-->
     <div class="maincontainer">
         <div class="sidebar">
             <nav>
@@ -25,39 +25,39 @@
                 </ul>
             </nav>
         </div>
+<!-- 로그인 폼, 약관동의 폼 포함 -->
+        <main class="signup-form">
+            <form>
+                <label for="username">이름:</label>
+                <input type="text" name="username" id="username" />
 
-       
-        <form>
-            <label for="name">이름:</label>
-            <input type="text" name="username" id="username" />
+                <label for="useremail">이메일:</label>
+                <input type="email" name="useremail" id="useremail" />
 
-            <label for="email">이메일:</label>
-            <input type="email" name="useremail" id="useremail" />
+                <label for="password">비밀번호:</label>
+                <input type="password" name="password" id="password" />
 
-            <label for="password">비밀번호:</label>
-            <input type="password" name="password" id="password" />
+                <label>성별:</label>
+                <div class="gender">
+                    <input type="radio" name="gender" id="male" value="남성" />
+                    <label for="male">남성</label>
 
-            <label>성별:</label>
-            <div class="gender">
-                <input type="radio" name="gender" id="male" value="남성" />
-                <label for="male">남성</label>
+                    <input type="radio" name="gender" id="female" value="여성" />
+                    <label for="female">여성</label>
+                </div>
 
-                <input type="radio" name="gender" id="female" value="여성" />
-                <label for="female">여성</label>
-            </div>
+                <div class="agree">
+                    <input type="checkbox" name="agree" id="agree" />
+                    <label for="agree">약관에 동의합니다</label>
+                </div>
 
-            <div class="agree">
-                <input type="checkbox" name="agree" id="agree" />
-                <label for="agree">약관에 동의합니다</label>
-            </div>
-
-            <button type="submit">회원가입</button>
-        </form>
-     
+                <button type="submit">회원가입</button>
+            </form>
+        </main>
     </div>
-
+<!-- 하단바 -->
     <footer>
-        <p> &copy; 2024 MyWebsite | 연락처 : email@example.com</p>
+        <p>&copy; 2024 MyWebsite | 연락처 : email@example.com</p>
     </footer>
 
 </body>

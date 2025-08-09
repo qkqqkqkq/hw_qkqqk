@@ -1,72 +1,76 @@
 /* 초기화 */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 /* 상단바 */
-#main-header{
-    background-image:url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA1MTZfMTUy%2FMDAxNzE1Nzg3NDY4Mzk2.N1E8RlhMCZuU3VDKPfDrIhbw5bBDwa8baJDtD2wRnJYg.D3ulpKULk1S2ykmzTky9Qvk9mTjDvW8MGcqzckBKbN8g.PNG%2F25.png&type=sc960_832');
+#main-header {
+    background-image: url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA1MTZfMTUy%2FMDAxNzE1Nzg3NDY4Mzk2.N1E8RlhMCZuU3VDKPfDrIhbw5bBDwa8baJDtD2wRnJYg.D3ulpKULk1S2ykmzTky9Qvk9mTjDvW8MGcqzckBKbN8g.PNG%2F25.png&type=sc960_832');
     background-size: cover;
     color: white;
     text-align: center;
     font-size: 13px;
     padding: 20px 0;
-    height: 150px;
+    height: 90px;
     display: flex;
-    justify-content: center; 
-    /* main axis을 따라 아이템을 어떻게 정렬할지 정해주는 속성 */
+    justify-content: center;
 }
 
-.maincontainer{
+/* 서브컨테이너: sidebar + maincontainer 묶음 */
+.subcontainer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
 
+/* 사이드바 */
+.sidebar {
+    margin-left: 3px;
+    margin-top: 20px;
 }
-.sidebar{
-    margin-right: auto;
-}
-.sidebar ul{
+
+.sidebar ul {
     list-style: none;
 }
 
 .sidebar ul li a {
-    display: block; 
-    width: 170px; 
-    height: 40px; 
-    line-height: 40px; 
-    margin-top: 16px;
-    background-color: #28a745; 
+    display: block;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: #28a745;
     color: white;
     text-decoration: none;
-    text-align:left; 
+    text-align: left;
     padding-left: 8px;
-    font-size: 13px; 
-    margin-left: 20px;
-    
+    font-size: 13px;
 }
 
 .sidebar ul li a:hover {
     background-color: #218838;
 }
 
-.sidebar ul li a:hover {
-    background-color: #218838; 
+/* 메인 컨테이너 */
+.maincontainer {
+    flex: 5; /* 남는 공간 모두 차지 */
 }
 
-form{
-    position: absolute;
+/* 폼 스타일 */
+form {
     font-size: 13px;
-    margin-top: 10%;
     background-color: #f0f0f0;
     padding: 2%;
-    max-width: 25%;
-    margin-bottom: 20%;
-    
+    max-width: 400px; /* 최대 넓이 고정 */
+    width: 100%; /* 화면 좁으면 줄어듬 */
+    border-radius: 6px;
 }
 
+/* 폼 내부 요소 */
 form label,
 form input,
 form .gender,
@@ -74,15 +78,67 @@ form .agree,
 form button {
     display: block;
     width: 100%;
-    margin-bottom: 2px
+    margin-bottom: 8px;
 }
 
-footer{
+/* 성별 라디오 버튼 가로 배치 */
+.gender {
+    display: flex;
+    gap: 15px;
+    margin-top: 4px;
+}
+
+.gender input[type="radio"] {
+    width: auto;
+    margin-top: 2px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.gender label {
+    width: auto;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.agree {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+}
+
+.agree label {
+    cursor: pointer;
+}
+
+.agree input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+/* 회원가입 버튼 */
+form button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* 푸터 */
+footer {
     color: white;
     text-align: center;
     background-color: black;
-    padding: 3px;
+    padding: 6px;
     bottom: 0;
     position: fixed;
-    width:100%;
+    width: 100%;
 }
