@@ -1,8 +1,15 @@
-/* 초기화 */
+/* 전체 선택자 - 초기화 */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+/* 태그 선택자 (플렉스 컨테이너 안의 자식 요소 세로 방향 나열)*/
+body{
+    line-height: 2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 상단바 */
@@ -13,36 +20,26 @@
     text-align: center;
     font-size: 13px;
     padding: 20px 0;
-    height: 90px;
+    height: 150px;
+}
+
+/* main-header에 작성시 이미지 세로 기준으로 중앙 배열 */
+.header-image{
     display: flex;
     justify-content: center;
 }
 
-/* 서브컨테이너: sidebar + maincontainer 묶음 */
-.subcontainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 20px;
-}
 
 /* 사이드바 */
-.sidebar {
-    margin-left: 3px;
-    margin-top: 20px;
-}
-
-.sidebar ul {
+.sidebar nav ul{
     list-style: none;
+    padding:10px;
 }
 
 .sidebar ul li a {
     display: block;
-    width: 170px;
-    height: 40px;
     line-height: 40px;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-bottom: 10px;
     background-color: #28a745;
     color: white;
     text-decoration: none;
@@ -55,82 +52,63 @@
     background-color: #218838;
 }
 
-/* 메인 컨테이너 */
-.maincontainer {
-    flex: 5; /* 남는 공간 모두 차지 */
-}
-
 /* 폼 스타일 */
-form {
+.signup-form > form{
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
     font-size: 13px;
     background-color: #f0f0f0;
-    padding: 2%;
-    max-width: 400px; /* 최대 넓이 고정 */
-    width: 100%; /* 화면 좁으면 줄어듬 */
+    padding: 6%;
     border-radius: 6px;
+    width: 250px;
 }
 
-/* 폼 내부 요소 */
-form label,
-form input,
-form .gender,
-form .agree,
-form button {
-    display: block;
-    width: 100%;
-    margin-bottom: 8px;
+.signup-form label + input{
+    margin-bottom: 10px;
 }
 
-/* 성별 라디오 버튼 가로 배치 */
-.gender {
-    display: flex;
-    gap: 15px;
-    margin-top: 4px;
+.signup-form label[for = "username"]::before{
+    content:'👤';
+    margin-right: 5px;
 }
 
-.gender input[type="radio"] {
-    width: auto;
-    margin-top: 2px;
-    margin-right: 4px;
-    display: inline-block;
+.signup-form input, .signup-form button{
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
-.gender label {
-    width: auto;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.agree {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: auto;
-}
-
-.agree label {
-    cursor: pointer;
-}
-
-.agree input[type="checkbox"] {
-    width: auto;
-    margin: 0;
-}
 
 /* 회원가입 버튼 */
-form button {
+.signup-form button {
     background-color: #28a745;
     color: white;
-    padding: 8px 0;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
 }
 
 form button:hover {
     background-color: #218838;
 }
+
+/* css 위치 조정 */
+.sidebar{
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    width: 200px;
+}
+
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    flex:1;
+}
+
 
 /* 푸터 */
 footer {
